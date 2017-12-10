@@ -4,7 +4,7 @@ FROM jupyter/minimal-notebook
 
 LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
 
-#USER root
+USER root
 
 # libav-tools for matplotlib anim
 RUN apt-get update && \
