@@ -61,6 +61,9 @@ RUN cd /tmp && \
 ENV XDG_CACHE_HOME /home/$NB_USER/.cache/
 RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
     fix-permissions /home/$NB_USER
+
+USER $NB_USER
+
 # Spark dependencies
 ENV APACHE_SPARK_VERSION 2.2.0
 ENV HADOOP_VERSION 2.7
